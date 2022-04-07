@@ -5,10 +5,10 @@ module.exports = function binarySearch(array, value) {
     return array[middleIndex];
   }
   if (value < array[middleIndex]) {
-    let leftSide = array.slice(0, middleIndex);
+    const leftSide = array.slice(0, middleIndex);
     return binarySearch(leftSide, value);
   } else {
-    let rightSide = array.slice(middleIndex++, array.length);
+    const rightSide = array.slice(middleIndex++, array.length);
     return binarySearch(rightSide, value);
   }
 };
